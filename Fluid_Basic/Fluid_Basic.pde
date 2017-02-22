@@ -61,32 +61,7 @@ import processing.opengl.PGraphics2D;
       fluid.addTemperature(px, py, radius, temperature);
       //fluid.addVelocity(px, py, radius, 0, -50);
       
-      // add impulse: density + temperature
-      //float animator = sin(fluid.simulation_step*0.01f);
- 
-     /* intensity = 1.0f;
-      px = 2*width/3f;
-      py = 150;
-      radius = 50;
-      r = 1.0f;
-      g = 0.0f;
-      b = 0.3f;
-      fluid.addDensity(px, py, radius, r, g, b, intensity);
-      
-      temperature = animator * 20f;
-      fluid.addTemperature(px, py, radius, temperature);
-      
-      
-      // add impulse: density 
-      px = 1*width/3f;
-      py = height-2*height/3f;
-      radius = 50.5f;
-      r = g = b = 64/255f;
-      intensity = 1.0f;
-      fluid.addDensity(px, py, radius, r, g, b, intensity, 3);*/
-
-      
-      //boolean mouse_input = !cp5.isMouseOver() && mousePressed && !obstacle_painter.isDrawing();
+     
       boolean mouse_input = !cp5.isMouseOver() && mousePressed;
       
       // add impulse: density + velocity
@@ -159,37 +134,8 @@ import processing.opengl.PGraphics2D;
     pg_fluid.smooth(4);
     pg_fluid.beginDraw();
     pg_fluid.background(BACKGROUND_COLOR);
-    pg_fluid.endDraw();
-    
-    // pgraphics for obstacles
-    //pg_obstacles = (PGraphics2D createGraphics(viewport_w, viewport_h, P2D);
-    //pg_obstacles.noSmooth();
-    //pg_obstacles.beginDraw();
-    //pg_obstacles.clear();
-    // circle-obstacles
-    //pg_obstacles.strokeWeight(10);
-    //pg_obstacles.noFill();
-    //pg_obstacles.noStroke();
-    //pg_obstacles.fill(64);
-    //float radius;
-    //radius = 100;
-    //pg_obstacles.ellipse(1*width/3f,  2*height/3f, radius, radius);
-    //radius = 150;
-    //pg_obstacles.ellipse(2*width/3f,  2*height/4f, radius, radius);
-    //radius = 200;
-    //pg_obstacles.stroke(64);
-    //pg_obstacles.strokeWeight(10);
-    //pg_obstacles.noFill();
-    //pg_obstacles.ellipse(1*width/2f,  1*height/4f, radius, radius);
-    // border-obstacle
-    //pg_obstacles.strokeWeight(20);
-    //pg_obstacles.stroke(64);
-    //pg_obstacles.noFill();
-    //pg_obstacles.rect(0, 0, pg_obstacles.width, pg_obstacles.height);
-    //pg_obstacles.endDraw();
-    
-    // class, that manages interactive drawing (adding/removing) of obstacles
-    // obstacle_painter = new ObstaclePainter(pg_obstacles);
+    pg_fluid.endDraw();   
+   
     
     createGUI();
     
